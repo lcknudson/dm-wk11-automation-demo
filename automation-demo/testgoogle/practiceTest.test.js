@@ -22,7 +22,7 @@ beforeAll(async () => {
 // Quit a driver after each test
 afterEach(async() => {
   // if comment out the code below it will keep google open to see what it did
-  // await (await driver).quit();
+  await (await driver).quit();
   console.log('after')
 });
 

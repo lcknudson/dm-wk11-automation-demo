@@ -13,7 +13,9 @@ const search = async (driver, searchTerm) => {
     //the text in that element as a string
     let resultsText = await driver.findElement(By.id('res')).getText()
 
-    console.log({ resultsText })
+    //This console log let's us see what was actually returned
+    // console.log({ resultsText })
+
     //We make our results lower case and then expect it to contain our original search term
     expect(resultsText.toLowerCase()).toContain(searchTerm.toLowerCase())
 }
